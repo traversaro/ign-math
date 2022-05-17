@@ -145,11 +145,6 @@ if (BUILD_TESTING)
     add_test(NAME ${test}.py COMMAND
       "${PYTHON_EXECUTABLE}" "${CMAKE_SOURCE_DIR}/src/python_pybind11/test/${test}.py")
 
-    set(_env_vars)
-    list(APPEND _env_vars "PYTHONPATH=${FAKE_INSTALL_PREFIX}/lib/python/")
-    list(APPEND _env_vars "LD_LIBRARY_PATH=${FAKE_INSTALL_PREFIX}/lib:$ENV{LD_LIBRARY_PATH}")
-    set_tests_properties(${test}.py PROPERTIES
-      ENVIRONMENT "${_env_vars}")
   endforeach()
 
 endif()
