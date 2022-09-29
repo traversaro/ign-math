@@ -14,6 +14,6 @@ add_subdirectory(graph)
 
 # Bindings subdirectories
 if (${pybind11_FOUND})
-  add_subdirectory(python_pybind11)
+  #add_subdirectory(python_pybind11)
 endif()
 add_subdirectory(ruby)
